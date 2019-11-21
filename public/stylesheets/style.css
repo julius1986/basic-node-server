@@ -1,8 +1,58 @@
-body {
-  padding: 50px;
+
+html, body {
+  margin: 0;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
+.container{
+  height: 100vh;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginForm  {
+  padding: 3% 6%;
+  background-color: white;
+}
+
+.input-group{
+ display: flex;
+ flex-direction: column;
+}
+
+.input-group .field {
+  margin: 10px 2px;
+}
+
+.input-group input {
+  padding: 16px 10px;
+  font-size: 1.5em;
+  background-color: whitesmoke;
+  border: 0px;
+}
+
+
+.buttons-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-group .btn{
+  padding: 10px 20px;
+}
+
+.buttons-group .success{
+  background-color: #47cf5f;
+}
+
+.buttons-group .btn:hover {
+  background-color: #32be4a;
 }
