@@ -5,7 +5,7 @@ class jsonAnswer {
     this.message = message; //message
     this.data = data; //object with data
   }
-   successResponse (data) {
+  successResponse(data) {
     this.status = true;
     this.code = 200;
     this.message = "all fine";
