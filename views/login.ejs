@@ -1,0 +1,23 @@
+<%- include('layouts/main'); -%>
+
+<div class="container">
+    <form method="POST" action="/login" id="loginForm">
+        <div class="input-group">
+            <div class="field">
+                <input name="login" type="text" placeholder="login">
+            </div>
+            <div class="field">
+                <input name="password" type="text" placeholder="password">
+            </div>
+                <div class="field">
+                    <div class="buttons-group">
+                        <a href="#" class="btn success">Login</a>
+                        <a href="/registration" class="btn">Registration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="/javascripts/base.js"></script>

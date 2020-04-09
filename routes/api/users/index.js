@@ -29,7 +29,7 @@ router.post("/", function(req, res) {
 
 router.get("/:id", function(req, res) {
   findUserById(req.params.id);
-  res.send(new jsonAnswer(false, 404, "id is not a number"));
+  res.send(new jsonAnswer(true, 200, `user id is ${req.params.id}`));
 });
 
 router.put("/:id", function(req, res) {
