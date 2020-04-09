@@ -1,4 +1,6 @@
-<%- include('layouts/main'); -%>
+<%- include('layouts/top'); -%>
 
-<h1><%= message%></h1>
-<h1><%= error.status%></h1>
+<div class="error">
+    <p class="error__message">The error message: <%= message%></p>
+    <p class="error__message">The error status: <%= error.status%></p>
+</div>

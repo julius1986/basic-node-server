@@ -1,0 +1,36 @@
+<%- include('layouts/top'); -%>
+
+<div class="container">
+    <form class="form" method="POST" action="/registration" id="registrationForm">
+        <div class="input-group">
+            <div class="field">
+                <input name="login" type="text" placeholder="login">
+            </div>
+            <div class="field">
+                <input name="password" type="password" placeholder="password">
+            </div>
+            <div class="field">
+                <input name="repeatpassword" type="password" placeholder="repeat password">
+            </div>
+            <%if(error!==null){%>
+            <div class="field">
+                <%= error%>
+            </div>
+            <%}%>
+            <div class="field">
+                <div class="buttons-group">
+                    <button class="btn success" type="button">Create new user</button>
+                </div>
+            </div>
+        </div>
+</div>
+</form>
+</div>
+
+<script>
+    let registrationForm = document.querySelector("#registrationForm");
+    let registrationButton = registrationForm.querySelector(".success");
+    registrationButton.onclick = () => {
+        registrationForm.submit();
+    };
+</script>

@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 router.use((req, res, next) => {
@@ -6,8 +6,8 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Index", message: "This is index page." });
 });
 
 module.exports = router;

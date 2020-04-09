@@ -1,23 +1,29 @@
-<%- include('layouts/main'); -%>
+<%- include('layouts/top'); -%>
 
 <div class="container">
-    <form method="POST" action="/login" id="loginForm">
+    <form class="form" method="POST" action="/login" id="loginForm">
         <div class="input-group">
             <div class="field">
                 <input name="login" type="text" placeholder="login">
             </div>
             <div class="field">
-                <input name="password" type="text" placeholder="password">
+                <input name="password" type="password" placeholder="password">
             </div>
-                <div class="field">
-                    <div class="buttons-group">
-                        <a href="#" class="btn success">Login</a>
-                        <a href="/registration" class="btn">Registration</a>
-                    </div>
+            <div class="field">
+                <div class="buttons-group">
+                    <button class="btn success" type="button">Login</button>
+                    <a href="/registration" class="btn">Registration</a>
                 </div>
             </div>
         </div>
-    </form>
+</div>
+</form>
 </div>
 
-<script src="/javascripts/base.js"></script>
+<script>
+    let loginForm = document.querySelector("#loginForm");
+    let loginButton = loginForm.querySelector("#loginForm .success");
+    loginButton.onclick = () => {
+        loginForm.submit();
+    };
+</script>
